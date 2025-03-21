@@ -19,7 +19,7 @@ function createinputs() {
         divtry.innerHTML = `<span>try ${i}</span>`
         for (let f = 0; f < letters; f++) {
             let input = document.createElement("input");
-            input.setAttribute("max-length", 1);
+            input.setAttribute("maxlength", 1);
             input.type = "text";
             input.id = `guess-${i}-letter-${f}`
             divtry.appendChild(input);
