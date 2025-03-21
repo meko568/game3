@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 40px;
+    padding: 10px 50px;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 700px;
+    justify-content: space-around;
+}
+
+.box {
+    width: 45%;
+}
+
+.hang {
+    background-color: #eee;
+    position: relative;
+}
+
+.hang .con {
+    position: absolute;
+    bottom: 100px;
+}
+
+.the {
+    position: absolute;
+    background-color: black;
+}
+
+.the.one {
+    bottom: 50px;
+    width: 100px;
+    height: 10px;
+    left: 300px;
+    display: none;
+}
+
+.the.two {
+    bottom: 60px;
+    height: 450px;
+    width: 10px;
+    left: 350px;
+    transform: translate(-50%);
+    display: none;
+}
+
+.the.there {
+    bottom: 460px;
+    left: 355px;
+    height: 10px;
+    width: 200px;
+    display: none;
+}
+
+.the.there::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 10px;
+    height: 40px;
+    background-color: black;
+}
+
+.the.four {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px black dashed;
+    bottom: 270px;
+    left: 400px;
+    transform: translate(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.the.five {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: black solid 10px;
+    border-radius: 50%;
+    display: none;
+}
+
+.the.sex {
+    left: 550px;
+    transform: translate(-50%);
+    bottom: 75px;
+    width: 10px;
+    height: 200px;
+    display: none;
+}
+
+.the.seven {
+    left: 550px;
+    bottom: 75px;
+    width: 10px;
+    height: 200px;
+    display: none;
+}
+
+.the.eight {
+    left: 550px;
+    bottom: 75px;
+    width: 10px;
+    height: 200px;
+    display: none;
+}
+
+.the.seven::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    background-color: black;
+    height: 10px;
+    width: 140px;
+    left: -15px;
+    transform: rotate(-40deg);
+}
+
+.the.seven::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    background-color: black;
+    height: 10px;
+    width: 140px;
+    right: -15px;
+    transform: rotate(40deg);
+
+}
+
+.the.eight::after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    background-color: black;
+    height: 10px;
+    width: 140px;
+    left: -16px;
+    transform: rotate(-132deg);
+}
+
+.theconta {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #009688;
+    color: white;
+    width: 1000px;
+    height: 1000px;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 50px;
+}
+
+.theconta button {
+    background-color: white;
+    color: black;
+    width: 600px;
+    font-size: 80px;
+    height: 200px;
+    border: none;
+    animation: .5s linear;
+    border-radius: 30px;
+}
+
+@keyframes scale {
+    50% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.end {
+    text-transform: capitalize;
+}
+
+.theconta div {
+    padding: 100px 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+
+.the.eight::before {
+    content: "";
+    position: absolute;
+    top: 120%;
+    background-color: black;
+    height: 10px;
+    width: 140px;
+    right: -14px;
+    transform: rotate(132deg);
+}
+
+.words {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kind span {
+    color: rgb(230, 39, 1);
+    font-size: 50px;
+}
+
+.word {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 200px;
+    background-color: #eee;
+    align-items: center;
+}
+
+
+.word span:not(.space) {
+    margin: 0 20px;
+    background-color: #f8f8f8;
+    width: 100px;
+    height: 100px;
+    border-bottom: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.letter-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009688;
+    color: white;
+    width: 100px;
+    font-size: 60px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.letter-box.clicked {
+    pointer-events: none;
+    background-color: #222;
+    opacity: .2;
+}
+
+.space {
+    margin: 0 20px;
+    width: 40px;
+    height: 10px;
+    background-color: black;
+}
+
+.wrong-1 .one {
+    display: block;
+}
+
+.wrong-2 .two {
+    display: block;
+}
+
+.wrong-3 .there {
+    display: block;
+}
+
+.wrong-4 .four {
+    visibility: visible;
+}
+
+.wrong-5 .five {
+    display: block;
+}
+
+.wrong-6 .sex {
+    display: block;
+}
+
+.wrong-7 .seven {
+    display: block;
+}
+
+.wrong-8 .eight {
+    display: block;
+}

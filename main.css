@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --praimary-color: #f44336;
+}
+
+.disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+
+.contorl {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+}
+
+.theconta {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f89e13;
+    color: white;
+    font-size: 60px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px
+}
+
+.theconta button {
+    font-size: 40px;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    margin-top: 20px;
+}
+
+.hint {
+    width: 30%;
+    background-color: #18ba89;
+    color: white;
+    border: none;
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 40px;
+    border-radius: 6px;
+}
+
+.check {
+    font-size: 40px;
+    border-radius: 6px;
+    width: 50%;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 20px;
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+    margin: 20px 0 50px;
+}
+
+.game {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 2000px;
+    margin: auto;
+
+    .game-area {
+        position: relative;
+        text-align: center;
+
+        .inputs {
+
+            div {
+                margin: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    font-size: 40px;
+                    margin-right: 20px;
+                    font-weight: bold;
+                }
+
+                input {
+                    background-color: white;
+                    font-size: 50px;
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 5px;
+                    border-radius: 3px;
+                    border: none;
+                    caret-color: var(--praimary-color);
+                    border-bottom: 5px solid black;
+                    text-align: center;
+
+                    &:focus {
+                        outline-color: #ccc;
+                    }
+
+                    &.right {
+                        background-color: #f89e13;
+                        border: #f89e13;
+                        color: white;
+                    }
+
+                    &.no-place {
+                        background-color: #18ba89;
+                        color: white;
+                        border: #18ba89
+                    }
+
+                    &.wrong {
+                        background-color: #27303f;
+                        color: white;
+                        border: #27303f
+                    }
+                }
+            }
+        }
+    }
+
+    .keys {
+        h2 {
+            font-size: 60px;
+        }
+
+        .key-color {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+
+            .key-text {
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .color {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            .right {
+                background-color: #f89e13;
+            }
+
+            .no-place {
+                background-color: #18ba89;
+            }
+
+            .wrong {
+                background-color: #27303f;
+            }
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 50px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes scale {
+    50% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+button.end {
+    animation: .5s linear;
+}
