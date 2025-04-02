@@ -4,7 +4,6 @@
 
 body {
     margin: 0;
-    transform: scale(.4);
 }
 
 :root {
@@ -52,12 +51,12 @@ body {
     border: none;
     padding: 20px;
     margin-left: 20px;
-    font-size: 40px;
+    font-size: 20px;
     border-radius: 6px;
 }
 
 .check {
-    font-size: 40px;
+    font-size: 20px;
     border-radius: 6px;
     width: 50%;
     background-color: #f44336;
@@ -83,8 +82,8 @@ h1 {
 .game {
     text-align: center;
     display: flex;
-    justify-content: space-between;
-    width: 2000px;
+    justify-content: space-evenly;
+    width: 100vw;
     margin: auto;
 
     .game-area {
@@ -100,7 +99,7 @@ h1 {
                 justify-content: center;
 
                 span {
-                    font-size: 40px;
+                    font-size: 20px;
                     margin-right: 20px;
                     font-weight: bold;
                 }
@@ -108,8 +107,8 @@ h1 {
                 input {
                     background-color: white;
                     font-size: 50px;
-                    width: 100px;
-                    height: 100px;
+                    width: 50px;
+                    height: 50px;
                     margin: 0 5px;
                     border-radius: 3px;
                     border: none;
@@ -145,7 +144,7 @@ h1 {
 
     .keys {
         h2 {
-            font-size: 60px;
+            font-size: 40px;
         }
 
         .key-color {
@@ -156,7 +155,7 @@ h1 {
             margin: 20px 0;
 
             .key-text {
-                font-size: 40px;
+                font-size: 20px;
                 font-weight: bold;
             }
 
@@ -204,8 +203,10 @@ button.end {
     animation: .5s linear;
 }
 
+
 @media (max-width:991px) {
     .game {
         flex-direction: column-reverse;
     }
+
 }
