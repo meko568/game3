@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    transform: scale(.4);
+}
+
 :root {
     --praimary-color: #f44336;
 }
@@ -177,9 +182,7 @@ h1 {
 }
 
 footer {
-    position: fixed;
     width: 100%;
-    bottom: 0;
     font-size: 50px;
     background-color: #333;
     color: white;
@@ -199,4 +202,10 @@ footer {
 
 button.end {
     animation: .5s linear;
+}
+
+@media (max-width:991px) {
+    .game {
+        flex-direction: column-reverse;
+    }
 }

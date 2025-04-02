@@ -1,9 +1,9 @@
-let tries = 10;
+let tries = 7;
 
 let currentTry = 1;
 let game = document.querySelector(".game")
 let check = document.querySelector(".check");
-let words = ["53452", "52975725439752", "5397502", "572010741", "59324572", "421432", "131658409", "124431343"];
+let words = ["0749264916", "9355010734", "0374017440", "0375026103", "0193756104", "0385620572", "0381948293", "0381556793"];
 let word = words[Math.floor(Math.random() * words.length)];
 let letters = word.length;
 let hint = document.querySelector(".hint")
