@@ -92,7 +92,7 @@ h1 {
 
         .inputs {
 
-            div {
+            >div {
                 margin: 20px;
                 display: flex;
                 align-items: center;
@@ -208,5 +208,10 @@ button.end {
     .game {
         flex-direction: column-reverse;
     }
+
+    .inputs>div {
+        flex-direction: column;
+    }
+
 
 }

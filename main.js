@@ -16,13 +16,14 @@ function createinputs() {
         if (i !== 1) {
             divtry.classList.add("disabled")
         }
-        divtry.innerHTML = `<span>try ${i}</span>`
+        divtry.innerHTML = `<span>try ${i}</span><div></div>`;
+        let u = divtry.children[1]
         for (let f = 0; f < letters; f++) {
             let input = document.createElement("input");
             input.setAttribute("maxlength", 1);
             input.type = "text";
             input.id = `guess-${i}-letter-${f}`
-            divtry.appendChild(input);
+            u.appendChild(input);
         }
         containput.appendChild(divtry);
     }
