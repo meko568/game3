@@ -213,5 +213,7 @@ button.end {
         flex-direction: column;
     }
 
-
+    .contorl {
+        margin-left: 0 !important;
+    }
 }
