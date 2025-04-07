@@ -69,7 +69,7 @@ function createinputs() {
 }
 window.onload = function () {
     createinputs()
-    divs = document.querySelectorAll(".inputs div");
+    divs = document.querySelectorAll(".inputs>div");
     check.onclick = function () {
         let success = true;
         for (let i = 0; i < letters; i++) {
@@ -111,9 +111,11 @@ window.onload = function () {
                 document.body.appendChild(conta)
                 game.classList.add("disabled");
             } else {
+                console.log(divs)
                 divs.forEach(function (e) {
                     if (e.classList.contains(`try-${currentTry}`)) {
                         e.classList.remove("disabled");
+                        e.children[1].classList.remove("disabled")
                     } else {
                         e.classList.add("disabled")
                     }
