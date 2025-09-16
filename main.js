@@ -1,10 +1,10 @@
-let tries = 7;
+let tries = 5;
 
 let currentTry = 1;
 let game = document.querySelector(".game")
 let check = document.querySelector(".check");
-let words = ["0749264916", "9355010734", "0374017440", "0375026103", "0193756104", "0385620572", "0381948293", "0381556793"];
-let word = words[Math.floor(Math.random() * words.length)];
+let word = `${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}`;
+console.log(word);
 let letters = word.length;
 let hint = document.querySelector(".hint")
 let divs = "";
@@ -16,7 +16,7 @@ function createinputs() {
         if (i !== 1) {
             divtry.classList.add("disabled")
         }
-        divtry.innerHTML = `<span>try ${i}</span><div></div>`;
+        divtry.innerHTML = `<span>Try ${i}</span><div></div>`;
         let u = divtry.children[1]
         for (let f = 0; f < letters; f++) {
             let input = document.createElement("input");
@@ -156,6 +156,7 @@ window.onload = function () {
 }
 let numberofhints = 0;
 hint.onclick = function () {
+    hint.children[0].innerHTML = +hint.children[0].innerHTML - 1
     if (numberofhints === 1) {
         hint.classList.add("disabled")
     }
